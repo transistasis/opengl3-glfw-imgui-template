@@ -13,4 +13,4 @@ prepare : clean
 # Deletes the generated build directory
 .PHONY : clean
 clean :
-	rm -rf build
+	rm -rf build && cd vendor && make clean
