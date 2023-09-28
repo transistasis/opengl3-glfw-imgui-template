@@ -1,4 +1,7 @@
 #include <iostream>
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
 #include <glad/gl.h>
 #include <glfw/glfw3.h>
 
@@ -33,6 +36,9 @@ int main() {
   std::cout << "GLAD VERSION: "
             << GL_1PASS_EXT << "."
             << GL_1PASS_EXT << std::endl;
+
+  std::cout << "IMGUI VERSION: "
+            << IMGUI_VERSION << std::endl;
 
     // glfw: initialize and configure
     // ------------------------------
