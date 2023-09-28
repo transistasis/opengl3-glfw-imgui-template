@@ -6,7 +6,7 @@ This is a reference design that demonstrates how to integrate OpenGL 3.3, GLFW, 
 
 The GLAD generator utilizes the Jinja2 Python library, so it needs to be installed:
 
-```python3
+```bash
 pip install -U Jinja2
 ```
 
@@ -20,4 +20,4 @@ sudo apt-get install xorg-dev
 
 ## References
 
-The excellent ![https://github.com/drsnuggles8/OloEngineBase](OloEngine Project) was referenced when creating this template in order to learn how to better organize a large-scale project and use real-world CMake in general. I feel that the author, drsnuggles8, did a tremendous job of managing the complexity of their project.
+The excellent [OloEngine Project](https://github.com/drsnuggles8/OloEngineBase) was referenced when creating this template in order to learn how to better organize a large-scale project and use real-world CMake in general. I feel that the author, drsnuggles8, did a tremendous job of managing the complexity of their project.
