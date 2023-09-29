@@ -41,7 +41,14 @@ CPMAddPackage(NAME imgui
 	set(IMGUI_INCLUDE_DIR ${imgui_SOURCE_DIR})
 	set(IMGUI_SOURCES ${imgui_sources} ${imgui_sources_cpp})
 
-	add_library(imgui STATIC ${IMGUI_SOURCES} ${IMGUI_HEADERS} "${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp" "${IMGUI_DIR}/backends/imgui_impl_opengl3.h" "${IMGUI_DIR}/backends/imgui_impl_opengl3_loader.h")
+	add_library(imgui STATIC 
+    ${IMGUI_SOURCES} 
+    ${IMGUI_HEADERS} 
+    "${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp" 
+    "${IMGUI_DIR}/backends/imgui_impl_opengl3.h" 
+    "${IMGUI_DIR}/backends/imgui_impl_glfw.h"
+    "${IMGUI_DIR}/backends/imgui_impl_glfw.cpp"
+  )
 	target_compile_definitions(imgui PRIVATE IMGUI_IMPL_OPENGL_LOADER_GLAD=1)
 	target_include_directories(imgui PUBLIC ${IMGUI_DIR} "glfw-src/include" "glad-build/include")
 	set_target_properties(imgui PROPERTIES
